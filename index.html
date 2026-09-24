@@ -2,10 +2,11 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-A0twv/TfRslOpFQZWHVPgbT5WxlczGThF8bjfLI2h/k=' 'sha256-BSQT7E0TLKgfcNiT8Vu41at52OBpcJBQ7OzCA5vTLps='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HOGARQ · Lámparas de Diseño Minimalista | Tienda Oficial 2026</title>
-<meta name="description" content="HOGARQ · Tienda de lámparas de diseño minimalista. 5 modelos únicos en 5 colores. Envíos a todo el país. Pide por Instagram.">
-<meta name="keywords" content="HOGARQ, lámparas, lámparas de diseño, lámparas minimalistas, iluminación, decoración, hogar">
+<title>Hogarq | Lámparas de diseño minimalista en Colombia</title>
+<meta name="description" content="Descubre las lámparas de diseño minimalista de Hogarq: Capas, Órbita, Pétalo, Onda y Nube, en cinco colores. Bogotá, Colombia. Pedidos por Instagram.">
 <meta name="author" content="HOGARQ">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#f6ead8">
@@ -14,7 +15,7 @@
 <meta property="og:title" content="HOGARQ · Lámparas de Diseño Minimalista">
 <meta property="og:description" content="5 lámparas únicas, 5 colores cada una. Diseño pensado para emocionar.">
 <meta property="og:site_name" content="HOGARQ">
-<meta property="og:locale" content="es_ES">
+<meta property="og:locale" content="es_CO">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
 
@@ -28,7 +29,9 @@
   "@type": "Store",
   "name": "HOGARQ",
   "description": "Tienda de lámparas de diseño minimalista",
-  "priceRange": "COP",
+  "email": "Hogarqcol@gmail.com",
+  "currenciesAccepted": "COP",
+  "address": {"@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO"},
   "brand": {"@type": "Brand", "name": "HOGARQ"},
   "sameAs": ["https://www.instagram.com/hogarq_col"]
 }
@@ -61,7 +64,7 @@ h2{font-size:var(--t-h);font-weight:500;line-height:var(--lh-heading);letter-spa
 p.lead{font-size:var(--t-sub);line-height:1.22;color:var(--text);max-width:640px;margin-top:var(--sp-20)}
 @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
-[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out);transition-delay:var(--delay,0ms);will-change:opacity,transform}
+[data-reveal]{opacity:1;transform:none;transition:opacity .8s var(--ease-out),transform .8s var(--ease-out);transition-delay:var(--delay,0ms);will-change:opacity,transform}
 [data-reveal].is-visible{opacity:1;transform:none}
 .view-enter{animation:rise .6s var(--ease-out) both}
 .img-fade{opacity:0;transition:opacity .6s var(--ease-soft)}
@@ -122,7 +125,7 @@ p.lead{font-size:var(--t-sub);line-height:1.22;color:var(--text);max-width:640px
   .scroll-cue{display:none}
 }
 .cream{background:var(--bg);position:relative;z-index:2}
-section{padding:var(--gap-section) 0}
+section{scroll-margin-top:90px;padding:var(--gap-section) 0}
 section.tight{padding-top:0}
 .intro .section-head{margin-bottom:var(--sp-40)}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-20)}
@@ -258,17 +261,8 @@ textarea.field{min-height:120px}
 <div id="viewHome">
   <section class="video-section" id="videoSection">
     <div class="video-sticky">
-      <video id="sv" muted playsinline preload="auto" webkit-playsinline autoplay loop disablepictureinpicture>
-        <source src="Lumina.mp4" type="video/mp4">
+      <video id="sv" muted playsinline preload="metadata" webkit-playsinline autoplay loop disablepictureinpicture>
         <source src="lumina.mp4" type="video/mp4">
-        <source src="./Lumina.mp4" type="video/mp4">
-        <source src="./lumina.mp4" type="video/mp4">
-        <source src="videos/Lumina.mp4" type="video/mp4">
-        <source src="videos/lumina.mp4" type="video/mp4">
-        <source src="assets/Lumina.mp4" type="video/mp4">
-        <source src="assets/lumina.mp4" type="video/mp4">
-        <source src="media/Lumina.mp4" type="video/mp4">
-        <source src="media/lumina.mp4" type="video/mp4">
       </video>
       <div class="video-overlay">
         <h1>Mobiliario para habitar</h1>
@@ -307,7 +301,13 @@ textarea.field{min-height:120px}
           <span class="label">Catálogo</span>
           <h2>Cinco lámparas, cinco colores.</h2>
         </div>
-        <div class="products-grid" id="grid"></div>
+        <div class="products-grid" id="grid">
+<a class="product-card" href="#producto/1"><div class="product-photo"><img src="CAPAS FOTO ROSADA.png" alt="Lámpara Capas de Hogarq, color rosado" loading="lazy" decoding="async"></div><div class="product-meta"><span class="name">Capas</span><span class="price">100.000 COP</span></div><div class="product-sub">Filamento PLA</div></a>
+<a class="product-card" href="#producto/2"><div class="product-photo"><img src="ÓRBITA FOTO ROJA.png" alt="Lámpara Órbita de Hogarq, color rojo" loading="lazy" decoding="async"></div><div class="product-meta"><span class="name">Órbita</span><span class="price">100.000 COP</span></div><div class="product-sub">Filamento PLA</div></a>
+<a class="product-card" href="#producto/3"><div class="product-photo"><img src="PETALO FOTO AMARILLA.png" alt="Lámpara Pétalo de Hogarq, color amarillo" loading="lazy" decoding="async"></div><div class="product-meta"><span class="name">Pétalo</span><span class="price">90.000 COP</span></div><div class="product-sub">Filamento PLA</div></a>
+<a class="product-card" href="#producto/4"><div class="product-photo"><img src="ONDA FOTO AZUL.png" alt="Lámpara Onda de Hogarq, color azul" loading="lazy" decoding="async"></div><div class="product-meta"><span class="name">Onda</span><span class="price">100.000 COP</span></div><div class="product-sub">Filamento PLA</div></a>
+<a class="product-card" href="#producto/5"><div class="product-photo"><img src="NUBE FOTO BLANCA.png" alt="Lámpara Nube de Hogarq, color blanco" loading="lazy" decoding="async"></div><div class="product-meta"><span class="name">Nube</span><span class="price">100.000 COP</span></div><div class="product-sub">Filamento PLA</div></a>
+</div>
       </div>
     </section>
 
@@ -326,20 +326,20 @@ textarea.field{min-height:120px}
             <span class="label">Contacto</span>
             <h2>Cuéntanos qué buscas.</h2>
             <p>Respondemos personalmente cada mensaje en menos de 24 horas.</p>
-            <div class="contact-detail"><span class="k">✉</span><span>hola@hogarq.com</span></div>
-            <div class="contact-detail"><span class="k">☎</span><span>+57 300 000 0000</span></div>
+            <div class="contact-detail"><span class="k">✉</span><a href="mailto:Hogarqcol@gmail.com">Hogarqcol@gmail.com</a></div>
             <div class="contact-detail"><span class="k">◷</span><span>Lun – Vie · 10:00 – 19:00</span></div>
           </div>
 
-          <form class="contact-form" id="cf" data-reveal novalidate>
+          <form class="contact-form" id="cf" data-reveal>
             <div class="form-row">
-              <input class="field" type="text" name="nombre" placeholder="Nombre" autocomplete="name" required>
-              <input class="field" type="email" name="email" placeholder="Email" autocomplete="email" required>
+              <input class="field" type="text" name="nombre" aria-label="Nombre" maxlength="100" placeholder="Nombre" autocomplete="name" required>
+              <input class="field" type="email" name="email" aria-label="Correo electrónico" maxlength="254" placeholder="Email" autocomplete="email" required>
             </div>
-            <input class="field" type="text" name="asunto" placeholder="Asunto (opcional)">
-            <textarea class="field" name="mensaje" placeholder="Mensaje" required></textarea>
+            <input class="field" type="text" name="asunto" aria-label="Asunto (opcional)" maxlength="150" placeholder="Asunto (opcional)">
+            <textarea class="field" name="mensaje" aria-label="Mensaje" maxlength="1500" placeholder="Mensaje" required></textarea>
             <p class="form-note" id="formNote" role="status"></p>
-            <button type="submit" class="btn" style="align-self:flex-start">Enviar mensaje</button>
+            <button type="submit" class="btn" style="align-self:flex-start">Preparar correo</button>
+            <p style="font-size:var(--t-caption)">Se abrirá tu aplicación de correo para que revises y envíes el mensaje.</p>
           </form>
         </div>
       </div>
@@ -353,7 +353,7 @@ textarea.field{min-height:120px}
             <a href="#galeria">Galería</a>
             <a href="#productos">Colección</a>
             <a href="#contacto">Contacto</a>
-            <a href="https://www.instagram.com/hogarq_col" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.instagram.com/hogarq_col" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
         </div>
         <div class="footer-bottom">
@@ -399,7 +399,7 @@ textarea.field{min-height:120px}
         </div>
 
         <div class="detail-action">
-          <a href="https://www.instagram.com/hogarq_col" target="_blank" rel="noopener" class="btn-ig-black">Contáctanos por Instagram para tu pedido</a>
+          <a href="https://www.instagram.com/hogarq_col" target="_blank" rel="noopener noreferrer" class="btn-ig-black">Contáctanos por Instagram para tu pedido</a>
         </div>
       </div>
     </div>
@@ -417,15 +417,15 @@ var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
    ===================================================== */
 var PRODUCTS = [
   {id:1,icon:'🪔',name:'Capas',sub:'Filamento PLA',price:100000,
-    specs:{'Material':'Filamento PLA','Dimensiones':'Ø 22 × 42 cm','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
+    specs:{'Material':'Filamento PLA','Dimensiones':'24 cm de alto × 14 cm de ancho','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
   {id:2,icon:'💡',name:'Órbita',sub:'Filamento PLA',price:100000,
-    specs:{'Material':'Filamento PLA','Dimensiones':'Ø 22 × 42 cm','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
+    specs:{'Material':'Filamento PLA','Dimensiones':'26,5 cm de alto × 12,8 cm de ancho','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
   {id:3,icon:'✨',name:'Pétalo',sub:'Filamento PLA',price:90000,
-    specs:{'Material':'Filamento PLA','Dimensiones':'Ø 22 × 42 cm','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
+    specs:{'Material':'Filamento PLA','Dimensiones':'20 cm de alto × 13 cm de ancho','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
   {id:4,icon:'🌙',name:'Onda',sub:'Filamento PLA',price:100000,
-   specs:{'Material':'Filamento PLA','Dimensiones':'Ø 22 × 42 cm','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
-  {id:5,icon:'🕯️',name:'Nube',sub:'Cilindro de mármol · luz cálida',price:100000,
-    specs:{'Material':'Filamento PLA','Dimensiones':'Ø 22 × 42 cm','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
+   specs:{'Material':'Filamento PLA','Dimensiones':'24 cm de alto × 22 cm de ancho','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
+  {id:5,icon:'🕯️',name:'Nube',sub:'Filamento PLA',price:100000,
+    specs:{'Material':'Filamento PLA','Dimensiones':'20 cm de alto × 24 cm de ancho','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
 ];
 var COLORS = ['blanco','azul','amarillo','rosado','rojo'];
 
@@ -497,27 +497,6 @@ function watchImage(img){
 }
 document.querySelectorAll('img.img-fade').forEach(watchImage);
 
-var grid = $('#grid');
-PRODUCTS.forEach(function(p,i){
-  var card = document.createElement('a');
-  card.className = 'product-card';
-  card.href = '#producto/' + p.id;
-  card.setAttribute('data-reveal','');
-  card.style.setProperty('--delay',(i%3)*110 + 'ms');
-
-  var img = getDefaultImage(p.id);
-  var photo = img
-    ? '<img class="img-fade" src="'+img+'" alt="'+p.name+'" loading="lazy" decoding="async">'
-    : p.icon;
-
-  card.innerHTML =
-    '<div class="product-photo">'+photo+'</div>'+
-    '<div class="product-meta"><span class="name">'+p.name+'</span><span class="price">'+formatCOP(p.price)+'</span></div>'+
-    '<div class="product-sub">'+p.sub+'</div>';
-
-  grid.appendChild(card);
-  card.querySelectorAll('img.img-fade').forEach(watchImage);
-});
 scanReveals();
 
 /* =====================================================
@@ -534,7 +513,7 @@ function showHome(){
   viewHome.style.display = 'block';
   header.style.display = '';
   header.classList.remove('is-hidden');
-  document.title = 'HOGARQ · Lámparas de Diseño Minimalista';
+  document.title = 'Hogarq | Lámparas de diseño minimalista en Colombia';
   currentProductId = null;
   updateHeader();
 }
@@ -561,6 +540,7 @@ function showProduct(id){
     d.className = 'dot' + (c === initialColor ? ' active' : '');
     d.dataset.color = c;
     d.setAttribute('aria-label', c);
+    d.setAttribute('aria-pressed', c === initialColor ? 'true' : 'false');
     colors.appendChild(d);
   });
 
@@ -577,7 +557,7 @@ function showProduct(id){
   viewProduct.style.display = 'block';
   header.style.display = 'none';
   document.title = p.name + ' · HOGARQ';
-  window.scrollTo(0,0);
+  window.scrollTo({top:0,behavior:'instant'});
 
   if(!reduceMotion){
     detailGrid.classList.remove('view-enter');
@@ -589,8 +569,9 @@ function showProduct(id){
 $('#dColors').addEventListener('click', function(e){
   var dot = e.target.closest('.dot');
   if(!dot || dot.classList.contains('active')) return;
-  this.querySelectorAll('.dot').forEach(function(d){d.classList.remove('active');});
+  this.querySelectorAll('.dot').forEach(function(d){d.classList.remove('active');d.setAttribute('aria-pressed','false');});
   dot.classList.add('active');
+  dot.setAttribute('aria-pressed','true');
   var set = PRODUCT_IMAGES[currentProductId];
   if(!set) return;
   var color = dot.dataset.color;
@@ -602,6 +583,7 @@ $('#dColors').addEventListener('click', function(e){
   img.classList.add('is-swapping');
   var pre = new Image();
   pre.onload = pre.onerror = function(){
+    if(!img.isConnected || !dot.classList.contains('active')) return;
     img.src = set[color];
     img.alt = nextAlt;
     requestAnimationFrame(function(){img.classList.remove('is-swapping');});
@@ -614,16 +596,14 @@ function route(){
   if(m){showProduct(parseInt(m[1],10));} else {showHome();}
 }
 window.addEventListener('hashchange', route);
-route();
 
 $('#backBtn').addEventListener('click', function(e){
   e.preventDefault();
-  if(location.hash && location.hash !== '#'){
-    location.hash = '';
-  } else {
-    showHome();
-  }
-  window.scrollTo({top:0,behavior:reduceMotion ? 'auto' : 'smooth'});
+  location.hash = 'productos';
+  showHome();
+  $('#productos').scrollIntoView({behavior:'instant', block:'start'});
+  var firstCard = $('#grid a');
+  if(firstCard) firstCard.focus({preventScroll:true});
 });
 
 var videoSection = $('#videoSection');
@@ -651,7 +631,7 @@ function updateHeader(){
 }
 window.addEventListener('scroll', updateHeader, {passive:true});
 window.addEventListener('resize', updateHeader);
-updateHeader();
+route();
 
 navToggle.addEventListener('click', function(){
   var open = nav.classList.toggle('is-open');
@@ -677,7 +657,7 @@ if(v){
     if(p && typeof p.then === 'function'){
       p.catch(function(){
         var kick = function(){
-          try{ v.play(); }catch(e){}
+          try{ var playback = v.play(); if(playback) playback.catch(function(){}); }catch(e){}
           document.removeEventListener('click', kick);
           document.removeEventListener('touchstart', kick);
           document.removeEventListener('scroll', kick);
@@ -727,9 +707,13 @@ if(form){
       return;
     }
     note.classList.remove('is-error');
-    note.textContent = 'Mensaje enviado. Te respondemos en menos de 24 horas, ' + nombre.value.trim() + '.';
+    if(!form.reportValidity()) return;
+    var subject = form.elements['asunto'].value.trim() || 'Consulta sobre Hogarq';
+    var body = 'Nombre: ' + nombre.value.trim() + '\nCorreo: ' + email.value.trim() + '\n\n' + mensaje.value.trim();
+    location.href = 'mailto:Hogarqcol@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    note.textContent = 'Correo preparado. Envíalo desde tu aplicación de correo. Si no se abre, escríbenos a Hogarqcol@gmail.com.';
     requestAnimationFrame(function(){note.classList.add('is-visible');});
-    form.reset();
+
   });
 }
 
