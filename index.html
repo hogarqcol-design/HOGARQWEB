@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOGARQ · Lámparas de Diseño Minimalista | Tienda Oficial 2026</title>
+<meta name="description" content="HOGARQ · Tienda de lámparas de diseño minimalista. 5 modelos únicos en 5 colores. Envíos a todo el país. Pide por Instagram.">
+<meta name="keywords" content="HOGARQ, lámparas, lámparas de diseño, lámparas minimalistas, iluminación, decoración, hogar">
+<meta name="author" content="HOGARQ">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f6ead8">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="HOGARQ · Lámparas de Diseño Minimalista">
+<meta property="og:description" content="5 lámparas únicas, 5 colores cada una. Diseño pensado para emocionar.">
+<meta property="og:site_name" content="HOGARQ">
+<meta property="og:locale" content="es_ES">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "HOGARQ",
+  "description": "Tienda de lámparas de diseño minimalista",
+  "priceRange": "COP",
+  "brand": {"@type": "Brand", "name": "HOGARQ"},
+  "sameAs": ["https://www.instagram.com/hogarq_col"]
+}
+</script>
+
+<style>
+:root{
+  --almond-cream:#ffffff;--candlelight:#fbf4e8;--coastal-sage:#99aba6;--golden-chamomile:#d2bf81;
+  --meadow-mist:#acb090;--olive-grove:#6f6c43;--olive-deep:#55523a;--obsidian-olive:#2b2a1f;
+  --bg:var(--almond-cream);--surface:var(--candlelight);--text:var(--obsidian-olive);
+  --text-muted:var(--meadow-mist);--border:rgba(43,42,31,0.12);--border-soft:rgba(43,42,31,0.06);
+  --dark:var(--olive-grove);--dark-border:rgba(246,234,216,0.15);--accent:var(--golden-chamomile);
+  --t-caption:16px;--t-body:18px;--t-sub:20px;--t-h-sm:24px;--t-h:28px;--t-display:40px;
+  --lh-caption:1.4;--lh-body:1.25;--lh-heading:1.17;
+  --sp-8:8px;--sp-12:12px;--sp-16:16px;--sp-20:20px;--sp-24:24px;--sp-40:40px;--sp-60:60px;--sp-100:100px;--sp-120:120px;
+  --max-w:1200px;--gap-section:100px;--radius:8px;
+  --ease-out:cubic-bezier(.22,.61,.36,1);--ease-soft:cubic-bezier(.4,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-weight:400;font-size:var(--t-body);line-height:var(--lh-body);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 var(--sp-40)}
+@media(max-width:640px){.container{padding:0 var(--sp-20)}}
+h2{font-size:var(--t-h);font-weight:500;line-height:var(--lh-heading);letter-spacing:-0.01em;color:var(--text)}
+.label{font-size:var(--t-caption);font-weight:400;color:var(--text-muted);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:var(--sp-20);display:block}
+p.lead{font-size:var(--t-sub);line-height:1.22;color:var(--text);max-width:640px;margin-top:var(--sp-20)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out);transition-delay:var(--delay,0ms);will-change:opacity,transform}
+[data-reveal].is-visible{opacity:1;transform:none}
+.view-enter{animation:rise .6s var(--ease-out) both}
+.img-fade{opacity:0;transition:opacity .6s var(--ease-soft)}
+.img-fade.is-loaded{opacity:1}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  [data-reveal]{opacity:1;transform:none}
+}
+.header{position:fixed;top:0;left:0;right:0;z-index:100;padding:var(--sp-20) 0;background:rgba(43,42,31,0.55);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom:1px solid rgba(246,234,216,0.12);transition:background .35s var(--ease-soft),border-color .35s var(--ease-soft),padding .25s var(--ease-soft),transform .45s var(--ease-out);animation:fade .7s var(--ease-out) both}
+.header.on-cream{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid var(--border);padding:var(--sp-16) 0}
+.header.is-hidden{transform:translateY(-100%)}
+.header .container{display:flex;justify-content:space-between;align-items:center;gap:var(--sp-20)}
+.scroll-progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;transform:scaleX(0);transform-origin:left;background:var(--accent);opacity:.9}
+.brand{font-size:var(--t-body);font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--almond-cream);transition:color .3s var(--ease-soft),opacity .3s var(--ease-soft)}
+.brand:hover{opacity:.7}
+.header.on-cream .brand{color:var(--text)}
+.nav{display:flex;gap:var(--sp-20);align-items:center}
+.nav-link{position:relative;font-size:var(--t-caption);color:var(--almond-cream);padding-bottom:6px;transition:color .3s var(--ease-soft)}
+.nav-link::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease-out)}
+.nav-link:hover::after{transform:scaleX(1);transform-origin:left}
+.header.on-cream .nav-link{color:var(--text)}
+.nav-btn{position:relative;isolation:isolate;overflow:hidden;font-size:var(--t-caption);color:var(--almond-cream);padding:8px 18px;border:1px solid var(--almond-cream);border-radius:var(--radius);background:transparent;transition:color .3s var(--ease-soft),border-color .3s var(--ease-soft)}
+.nav-btn::before{content:"";position:absolute;inset:0;background:var(--accent);transform:scaleY(0);transform-origin:bottom;transition:transform .35s var(--ease-out);z-index:-1}
+.nav-btn:hover{color:var(--text);border-color:var(--accent)}
+.nav-btn:hover::before{transform:scaleY(1)}
+.header.on-cream .nav-btn{color:var(--text);border-color:var(--text)}
+.header.on-cream .nav-btn::before{background:var(--text)}
+.header.on-cream .nav-btn:hover{color:var(--almond-cream);border-color:var(--text)}
+.nav-toggle{display:none;width:40px;height:40px;position:relative;border-radius:var(--radius)}
+.nav-toggle span{position:absolute;left:10px;width:20px;height:1.5px;background:var(--almond-cream);transition:transform .35s var(--ease-out),opacity .2s var(--ease-soft),background .3s var(--ease-soft)}
+.nav-toggle span:nth-child(1){top:15px}
+.nav-toggle span:nth-child(2){top:23px}
+.header.on-cream .nav-toggle span{background:var(--text)}
+.nav-toggle.is-open span:nth-child(1){transform:translateY(4px) rotate(45deg)}
+.nav-toggle.is-open span:nth-child(2){transform:translateY(-4px) rotate(-45deg)}
+@media(max-width:640px){
+  .header{padding:var(--sp-16) 0}
+  .nav-toggle{display:block}
+  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;padding:0 var(--sp-20);background:var(--bg);border-bottom:1px solid var(--border);max-height:0;overflow:hidden;opacity:0;transition:max-height .45s var(--ease-out),opacity .3s var(--ease-soft),padding .45s var(--ease-out)}
+  .nav.is-open{max-height:260px;opacity:1;padding:var(--sp-12) var(--sp-20) var(--sp-20)}
+  .nav .nav-link,.nav .nav-btn{color:var(--text);padding:var(--sp-16) 0;text-align:left}
+  .nav .nav-btn{border:none;border-top:1px solid var(--border);border-radius:0}
+  .nav .nav-btn::before{display:none}
+}
+.video-section{position:relative;z-index:1}
+.video-sticky{position:relative;height:100vh;width:100%;overflow:hidden;background:var(--olive-grove)}
+.video-sticky video{width:100%;height:100%;object-fit:cover;display:block;background:var(--olive-grove)}
+.video-sticky::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(43,42,31,.45),transparent 45%);pointer-events:none}
+.video-overlay{position:absolute;left:var(--sp-40);right:var(--sp-40);bottom:var(--sp-40);max-width:820px;color:var(--almond-cream);pointer-events:none;z-index:2}
+.video-overlay h1{font-size:var(--t-display);font-weight:400;line-height:var(--lh-heading);letter-spacing:-0.02em;text-shadow:0 2px 30px rgba(43,42,31,0.45);animation:rise 1s var(--ease-out) .25s both}
+.scroll-cue{position:absolute;right:var(--sp-40);bottom:var(--sp-40);z-index:2;display:flex;align-items:center;gap:var(--sp-12);font-size:var(--t-caption);letter-spacing:.12em;text-transform:uppercase;color:var(--almond-cream);opacity:.8;pointer-events:none;animation:fade 1s var(--ease-out) .8s both}
+.scroll-cue i{display:block;width:1px;height:42px;background:linear-gradient(to bottom,var(--almond-cream),transparent);animation:cue 2.2s var(--ease-soft) infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0);opacity:0}40%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@media(max-width:640px){
+  .video-overlay{left:var(--sp-20);right:var(--sp-20);bottom:var(--sp-20)}
+  .video-overlay h1{font-size:var(--t-h)}
+  .scroll-cue{display:none}
+}
+.cream{background:var(--bg);position:relative;z-index:2}
+section{padding:var(--gap-section) 0}
+section.tight{padding-top:0}
+.intro .section-head{margin-bottom:var(--sp-40)}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-20)}
+.gallery-item{position:relative;background:var(--surface);overflow:hidden;aspect-ratio:4/3}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease-out)}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-item.tall{grid-column:1/2;grid-row:1/3;aspect-ratio:auto;min-height:100%}
+@media(max-width:720px){
+  .gallery{grid-template-columns:1fr}
+  .gallery-item.tall{grid-column:auto;grid-row:auto;aspect-ratio:4/3;min-height:auto}
+}
+.products-head{margin-bottom:var(--sp-40)}
+.products-head .label{margin-bottom:var(--sp-16)}
+.products-section{padding-top:var(--sp-100)}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-60) var(--sp-20)}
+@media(max-width:900px){.products-grid{grid-template-columns:1fr 1fr;gap:var(--sp-40) var(--sp-16)}}
+@media(max-width:520px){.products-grid{grid-template-columns:1fr}}
+.product-card{display:flex;flex-direction:column;color:inherit;cursor:pointer}
+.product-photo{aspect-ratio:4/5;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:88px;border:1px solid var(--border-soft);position:relative;overflow:hidden;transition:background .4s var(--ease-soft),box-shadow .4s var(--ease-soft)}
+.product-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease-out),opacity .6s var(--ease-soft)}
+.product-photo::after{content:"Ver";position:absolute;bottom:20px;left:20px;font-size:var(--t-caption);letter-spacing:.08em;text-transform:uppercase;color:var(--text);opacity:0;transform:translateY(8px);transition:opacity .35s var(--ease-out),transform .35s var(--ease-out);z-index:2;text-shadow:0 1px 8px rgba(246,234,216,0.8)}
+.product-card:hover .product-photo{background:var(--accent);box-shadow:0 14px 34px rgba(43,42,31,.12)}
+.product-card:hover .product-photo img{transform:scale(1.04)}
+.product-card:hover .product-photo::after{opacity:.8;transform:none}
+.product-meta{padding-top:var(--sp-20);display:flex;justify-content:space-between;align-items:baseline;gap:var(--sp-12)}
+.product-meta .name{font-size:var(--t-body);font-weight:500;color:var(--text)}
+.product-meta .price{font-size:var(--t-caption);color:var(--text);white-space:nowrap}
+.product-sub{padding-top:6px;font-size:var(--t-caption);color:var(--text-muted);line-height:var(--lh-caption);max-width:280px}
+.dark{background:var(--dark);color:var(--almond-cream);padding:var(--sp-120) 0}
+.dark .label{color:var(--accent)}
+.dark h2{color:var(--almond-cream)}
+.dark p{font-size:var(--t-body);line-height:1.4;color:var(--almond-cream);max-width:600px;margin-top:var(--sp-20);opacity:.92}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-60);align-items:start}
+@media(max-width:780px){.contact-grid{grid-template-columns:1fr;gap:var(--sp-40)}}
+.contact-info .label{margin-bottom:var(--sp-16)}
+.contact-info h2{margin-bottom:var(--sp-24)}
+.contact-info p{margin-bottom:var(--sp-24);max-width:420px}
+.contact-detail{display:flex;gap:var(--sp-16);font-size:var(--t-caption);padding:var(--sp-12) 0;border-bottom:1px solid var(--border);transition:border-color .3s var(--ease-soft)}
+.contact-detail:hover{border-color:var(--accent)}
+.contact-detail .k{color:var(--text-muted);min-width:16px}
+.contact-form{display:flex;flex-direction:column;gap:var(--sp-16)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16)}
+@media(max-width:480px){.form-row{grid-template-columns:1fr}}
+.field{width:100%;padding:var(--sp-16);font-family:inherit;font-size:var(--t-caption);line-height:var(--lh-caption);color:var(--text);background:transparent;border:1px solid var(--text);border-radius:var(--radius);outline:none;resize:vertical;transition:border-color .25s var(--ease-soft),background .25s var(--ease-soft),transform .25s var(--ease-out)}
+.field::placeholder{color:var(--text-muted)}
+.field:focus{border-color:var(--accent);background:var(--surface);transform:translateY(-2px)}
+textarea.field{min-height:120px}
+.form-note{font-size:var(--t-caption);color:var(--olive-grove);opacity:0;transform:translateY(-6px);transition:opacity .4s var(--ease-soft),transform .4s var(--ease-out)}
+.form-note.is-visible{opacity:1;transform:none}
+.form-note.is-error{color:#a4403a}
+.btn{position:relative;isolation:isolate;overflow:hidden;display:inline-block;font-family:inherit;font-size:var(--t-caption);font-weight:500;padding:var(--sp-16) var(--sp-24);background:transparent;color:var(--text);border:1px solid var(--text);border-radius:var(--radius);cursor:pointer;text-align:center;transition:color .3s var(--ease-soft),border-color .3s var(--ease-soft)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--dark);transform:scaleY(0);transform-origin:bottom;transition:transform .35s var(--ease-out);z-index:-1}
+.btn:hover{color:var(--almond-cream);border-color:var(--dark)}
+.btn:hover::before{transform:scaleY(1)}
+.btn:active{transform:translateY(1px)}
+.footer{background:var(--dark);color:var(--almond-cream);padding:var(--sp-60) 0 var(--sp-40)}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:var(--sp-40)}
+.footer-brand{font-size:var(--t-body);font-weight:500;letter-spacing:0.15em;text-transform:uppercase}
+.footer-links{display:flex;gap:var(--sp-24);flex-wrap:wrap;font-size:var(--t-caption)}
+.footer-links a{position:relative;padding-bottom:4px;transition:color .3s var(--ease-soft)}
+.footer-links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease-out)}
+.footer-links a:hover{color:var(--accent)}
+.footer-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.footer-bottom{padding-top:var(--sp-40);margin-top:var(--sp-40);border-top:1px solid var(--dark-border);font-size:var(--t-caption);color:var(--meadow-mist);display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-16)}
+#viewProduct{display:none;background:var(--bg);min-height:100vh;padding-top:120px;padding-bottom:var(--sp-120)}
+.detail-header{position:fixed;top:0;left:0;right:0;padding:var(--sp-20) 0;background:var(--bg);border-bottom:1px solid var(--border);z-index:99}
+.detail-header .container{display:flex;justify-content:space-between;align-items:center;gap:var(--sp-20)}
+.btn-back{display:inline-flex;align-items:center;gap:8px;font-size:var(--t-caption);color:var(--text);padding:8px 16px;border:1px solid var(--text);border-radius:var(--radius);background:transparent;transition:background .25s var(--ease-soft),color .25s var(--ease-soft),border-color .25s var(--ease-soft)}
+.btn-back span{display:inline-block;transition:transform .3s var(--ease-out)}
+.btn-back:hover{background:var(--dark);color:var(--almond-cream);border-color:var(--dark)}
+.btn-back:hover span{transform:translateX(-4px)}
+.detail-brand{font-size:var(--t-body);font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--text)}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-60);align-items:start}
+@media(max-width:900px){.detail-grid{grid-template-columns:1fr;gap:var(--sp-40)}}
+.detail-visual{aspect-ratio:1/1;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:200px;border:1px solid var(--border-soft);position:relative;overflow:hidden}
+.detail-visual img{width:100%;height:100%;object-fit:cover;transition:opacity .35s var(--ease-soft),transform .8s var(--ease-out)}
+.detail-visual img.is-swapping{opacity:0;transform:scale(1.02)}
+@media(max-width:640px){.detail-visual{font-size:140px}}
+.detail-info .label{margin-bottom:var(--sp-16)}
+.detail-info h1{font-size:var(--t-display);font-weight:500;line-height:var(--lh-heading);letter-spacing:-0.02em;margin-bottom:6px}
+.detail-info .detail-sub{font-size:var(--t-body);color:var(--text-muted);margin-bottom:var(--sp-40)}
+.detail-block{padding:var(--sp-24) 0;border-top:1px solid var(--border)}
+.detail-block:last-of-type{border-bottom:1px solid var(--border)}
+.detail-block-label{font-size:var(--t-caption);color:var(--text-muted);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:var(--sp-16);display:block}
+.detail-price{font-size:var(--t-display);font-weight:500;line-height:var(--lh-heading);letter-spacing:-0.02em}
+.detail-price small{font-size:var(--t-caption);font-weight:400;color:var(--text-muted);letter-spacing:0;margin-left:var(--sp-12)}
+.color-row{display:flex;gap:var(--sp-12)}
+.dot{width:32px;height:32px;border-radius:50%;border:1px solid var(--border);cursor:pointer;padding:0;transition:transform .25s var(--ease-out),box-shadow .3s var(--ease-soft)}
+.dot:hover{transform:scale(1.12)}
+.dot.active{box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--text);animation:dotPop .35s var(--ease-out)}
+@keyframes dotPop{0%{transform:scale(1)}50%{transform:scale(1.18)}100%{transform:scale(1)}}
+.dot[data-color="blanco"]{background:#fff}
+.dot[data-color="azul"]{background:#3a86ff}
+.dot[data-color="amarillo"]{background:#ffbe0b}
+.dot[data-color="rosado"]{background:#ff85a1}
+.dot[data-color="rojo"]{background:#e63946}
+.spec-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 var(--sp-40)}
+@media(max-width:640px){.spec-list{grid-template-columns:1fr}}
+.spec-list li{display:flex;justify-content:space-between;gap:var(--sp-16);padding:var(--sp-12) 0;border-bottom:1px solid var(--border-soft);font-size:var(--t-caption);animation:rise .5s var(--ease-out) both;animation-delay:var(--delay,0ms)}
+.spec-list li .k{color:var(--text-muted)}
+.spec-list li .v{font-weight:500;color:var(--text);text-align:right}
+.detail-action{margin-top:var(--sp-40)}
+.btn-ig-black{display:flex;align-items:center;justify-content:center;gap:var(--sp-12);width:100%;font-size:var(--t-caption);font-weight:500;letter-spacing:0.04em;padding:var(--sp-20) var(--sp-24);background:var(--text);color:var(--almond-cream);border:1px solid var(--text);border-radius:var(--radius);text-align:center;transition:background .3s var(--ease-soft),border-color .3s var(--ease-soft),transform .25s var(--ease-out),box-shadow .3s var(--ease-soft)}
+.btn-ig-black::before{content:"";width:16px;height:16px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f6ead8' stroke-width='1.6'><rect x='3' y='3' width='18' height='18' rx='5'/><circle cx='12' cy='12' r='4'/><circle cx='17.5' cy='6.5' r='1' fill='%23f6ead8' stroke='none'/></svg>");background-size:contain;background-repeat:no-repeat;flex-shrink:0;transition:transform .4s var(--ease-out)}
+.btn-ig-black:hover{background:var(--olive-grove);border-color:var(--olive-grove);transform:translateY(-2px);box-shadow:0 12px 26px rgba(43,42,31,.18)}
+.btn-ig-black:hover::before{transform:rotate(-8deg) scale(1.1)}
+@media(max-width:768px){
+  :root{--gap-section:60px;--sp-120:80px;--sp-100:64px}
+  h2{font-size:var(--t-h-sm)}
+  .video-overlay h1{font-size:var(--t-h)}
+  .detail-info h1{font-size:var(--t-h)}
+  .detail-price{font-size:var(--t-h)}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="#" class="brand">HOGARQ</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" id="mainNav">
+      <a href="#galeria" class="nav-link">Galería</a>
+      <a href="#productos" class="nav-link">Colección</a>
+      <a href="#contacto" class="nav-btn">Contacto</a>
+    </nav>
+  </div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+</header>
+
+<div id="viewHome">
+  <section class="video-section" id="videoSection">
+    <div class="video-sticky">
+      <video id="sv" muted playsinline preload="auto" webkit-playsinline autoplay loop disablepictureinpicture>
+        <source src="Lumina.mp4" type="video/mp4">
+        <source src="lumina.mp4" type="video/mp4">
+        <source src="./Lumina.mp4" type="video/mp4">
+        <source src="./lumina.mp4" type="video/mp4">
+        <source src="videos/Lumina.mp4" type="video/mp4">
+        <source src="videos/lumina.mp4" type="video/mp4">
+        <source src="assets/Lumina.mp4" type="video/mp4">
+        <source src="assets/lumina.mp4" type="video/mp4">
+        <source src="media/Lumina.mp4" type="video/mp4">
+        <source src="media/lumina.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay">
+        <h1>Mobiliario para habitar</h1>
+      </div>
+      <div class="scroll-cue"><span>Desliza</span><i></i></div>
+    </div>
+  </section>
+
+  <div class="cream">
+
+    <section class="intro">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="label">HOGARQ · Colección 2026</span>
+          <h2>Diseño que transforma lo cotidiano en único.</h2>
+          <p class="lead">Piezas pensadas para habitar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="tight">
+      <div class="container">
+        <div class="gallery" data-reveal-group>
+          <div class="gallery-item tall" data-reveal><img class="img-fade" src="IMAGEN CUADRO1.png" alt="Galería 1" loading="lazy" decoding="async"></div>
+          <div class="gallery-item" data-reveal><img class="img-fade" src="IMAGEN CUADRO2.png" alt="Galería 2" loading="lazy" decoding="async"></div>
+          <div class="gallery-item" data-reveal><img class="img-fade" src="IMAGEN CUADRO3.png" alt="Galería 3" loading="lazy" decoding="async"></div>
+          <div class="gallery-item" data-reveal><img class="img-fade" src="IMAGEN CUADRO4.png" alt="Galería 4" loading="lazy" decoding="async"></div>
+          <div class="gallery-item" data-reveal><img class="img-fade" src="IMAGEN CUADRO5.png" alt="Galería 5" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="tight products-section">
+      <div class="container">
+        <div class="products-head" data-reveal>
+          <span class="label">Catálogo</span>
+          <h2>Cinco lámparas, cinco colores.</h2>
+        </div>
+        <div class="products-grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section class="dark">
+      <div class="container" data-reveal>
+        <span class="label">Filosofía</span>
+        <h2>HOGARQ.</h2>
+        <p>Hogar es aquello que hacemos nuestro.<br><br>En HOGARQ ofrecemos mobiliario pensado desde la arquitectura y para la forma en que habitamos nuestros espacios. Ofrecemos piezas que acompañan la vida cotidiana y que, más que ocupar un lugar, buscan hacerlo sentir propio.<br><br>HOGAR + ARQ. Ofrecemos diseño para habitar.</p>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info" data-reveal>
+            <span class="label">Contacto</span>
+            <h2>Cuéntanos qué buscas.</h2>
+            <p>Respondemos personalmente cada mensaje en menos de 24 horas.</p>
+            <div class="contact-detail"><span class="k">✉</span><span>hola@hogarq.com</span></div>
+            <div class="contact-detail"><span class="k">☎</span><span>+57 300 000 0000</span></div>
+            <div class="contact-detail"><span class="k">◷</span><span>Lun – Vie · 10:00 – 19:00</span></div>
+          </div>
+
+          <form class="contact-form" id="cf" data-reveal novalidate>
+            <div class="form-row">
+              <input class="field" type="text" name="nombre" placeholder="Nombre" autocomplete="name" required>
+              <input class="field" type="email" name="email" placeholder="Email" autocomplete="email" required>
+            </div>
+            <input class="field" type="text" name="asunto" placeholder="Asunto (opcional)">
+            <textarea class="field" name="mensaje" placeholder="Mensaje" required></textarea>
+            <p class="form-note" id="formNote" role="status"></p>
+            <button type="submit" class="btn" style="align-self:flex-start">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">HOGARQ</div>
+          <div class="footer-links">
+            <a href="#galeria">Galería</a>
+            <a href="#productos">Colección</a>
+            <a href="#contacto">Contacto</a>
+            <a href="https://www.instagram.com/hogarq_col" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 HOGARQ</span>
+          <span>Bogotá · Colombia</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<div id="viewProduct">
+  <header class="detail-header">
+    <div class="container">
+      <button class="btn-back" id="backBtn" type="button"><span>←</span> Volver</button>
+      <a href="#" class="detail-brand">HOGARQ</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="detail-grid" id="detailGrid">
+      <div class="detail-visual" id="dIcon">🪔</div>
+
+      <div class="detail-info">
+        <span class="label">Colección · 2026</span>
+        <h1 id="dName">Capas</h1>
+        <p class="detail-sub" id="dSub">Filamento PLA</p>
+
+        <div class="detail-block">
+          <span class="detail-block-label">Precio</span>
+          <div class="detail-price" id="dPrice">100.000 COP<small>+ envío</small></div>
+        </div>
+
+        <div class="detail-block">
+          <span class="detail-block-label">Color</span>
+          <div class="color-row" id="dColors"></div>
+        </div>
+
+        <div class="detail-block">
+          <span class="detail-block-label">Especificaciones</span>
+          <ul class="spec-list" id="dSpecs"></ul>
+        </div>
+
+        <div class="detail-action">
+          <a href="https://www.instagram.com/hogarq_col" target="_blank" rel="noopener" class="btn-ig-black">Contáctanos por Instagram para tu pedido</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* =====================================================
+   DATOS
+   ===================================================== */
+var PRODUCTS = [
+  {id:1,icon:'🪔',name:'Capas',sub:'Filamento PLA',price:100000,
+    specs:{'Material':'Filamento PLA','Dimensiones':'Ø 22 × 42 cm','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
+  {id:2,icon:'💡',name:'Órbita',sub:'Filamento PLA',price:100000,
+    specs:{'Material':'Filamento PLA','Dimensiones':'Ø 22 × 42 cm','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
+  {id:3,icon:'✨',name:'Pétalo',sub:'Filamento PLA',price:90000,
+    specs:{'Material':'Filamento PLA','Dimensiones':'Ø 22 × 42 cm','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
+  {id:4,icon:'🌙',name:'Onda',sub:'Filamento PLA',price:100000,
+   specs:{'Material':'Filamento PLA','Dimensiones':'Ø 22 × 42 cm','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
+  {id:5,icon:'🕯️',name:'Nube',sub:'Cilindro de mármol · luz cálida',price:100000,
+    specs:{'Material':'Filamento PLA','Dimensiones':'Ø 22 × 42 cm','Peso':'1.2 kg','Bombilla':'LED E27','Temperatura':'2700 K cálida','Envío':'3–5 días hábiles'}},
+];
+var COLORS = ['blanco','azul','amarillo','rosado','rojo'];
+
+var PRODUCT_IMAGES = {
+  1:{'blanco':'CAPAS FOTO BLANCA.png','azul':'CAPAS FOTO AZUL.png','amarillo':'CAPAS FOTO AMARILLA.png','rosado':'CAPAS FOTO ROSADA.png','rojo':'CAPAS FOTO ROJA.png'},
+  2:{'blanco':'ÓRBITA FOTO BLANCA.png','azul':'ÓRBITA FOTO AZUL.png','amarillo':'ÓRBITA FOTO AMARILLA.png','rosado':'ÓRBITA FOTO ROSADA.png','rojo':'ÓRBITA FOTO ROJA.png'},
+  3:{'blanco':'PETALO FOTO BLANCA.png','azul':'PETALO FOTO AZUL.png','amarillo':'PETALO FOTO AMARILLA.png','rosado':'PETALO FOTO ROSADA.png','rojo':'PETALO FOTO ROJA.png'},
+  4:{'blanco':'ONDA FOTO BLANCA.png','azul':'ONDA FOTO AZUL.png','amarillo':'ONDA FOTO AMARILLA.png','rosado':'ONDA FOTO ROSADA.png','rojo':'ONDA FOTO ROJA.png'},
+  5:{'blanco':'NUBE FOTO BLANCA.png','azul':'NUBE FOTO AZUL.png','amarillo':'NUBE FOTO AMARILLA.png','rosado':'NUBE FOTO ROSADA.png','rojo':'NUBE FOTO ROJA.png'}
+};
+
+/* =====================================================
+   COLOR DE PORTADA EN EL CATÁLOGO
+   — Cambia aquí el color con el que aparece cada lámpara
+   — Valores válidos: 'blanco' | 'azul' | 'amarillo' | 'rosado' | 'rojo'
+   ===================================================== */
+var COVER_COLORS = {
+  1: 'rosado',    // Capas
+  2: 'rojo',      // Órbita
+  3: 'amarillo',  // Pétalo
+  4: 'azul',      // Onda
+  5: 'blanco'     // Nube
+};
+
+function $(s){return document.querySelector(s);}
+function formatCOP(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.')+' COP';}
+
+/* Portada del catálogo — usa el color asignado en COVER_COLORS */
+function getDefaultImage(id){
+  if(!PRODUCT_IMAGES[id]) return null;
+  var color = COVER_COLORS[id] || 'blanco';
+  return PRODUCT_IMAGES[id][color] || PRODUCT_IMAGES[id]['blanco'];
+}
+
+/* Color inicial al entrar al detalle — mismo color que la portada */
+function getInitialColor(id){
+  return COVER_COLORS[id] || 'blanco';
+}
+
+/* =====================================================
+   REVEAL
+   ===================================================== */
+var revealObserver = null;
+if('IntersectionObserver' in window && !reduceMotion){
+  revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+}
+function observeReveal(el,index){
+  if(!revealObserver){el.classList.add('is-visible');return;}
+  if(index) el.style.setProperty('--delay',(index*90)+'ms');
+  revealObserver.observe(el);
+}
+function scanReveals(root){
+  (root || document).querySelectorAll('[data-reveal]:not(.is-visible)').forEach(function(el){
+    var siblings = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children,el) : 0;
+    observeReveal(el, el.parentElement && el.parentElement.hasAttribute('data-reveal-group') ? siblings : 0);
+  });
+}
+function watchImage(img){
+  if(img.complete){img.classList.add('is-loaded');return;}
+  img.addEventListener('load',function(){img.classList.add('is-loaded');});
+  img.addEventListener('error',function(){img.classList.add('is-loaded');});
+}
+document.querySelectorAll('img.img-fade').forEach(watchImage);
+
+var grid = $('#grid');
+PRODUCTS.forEach(function(p,i){
+  var card = document.createElement('a');
+  card.className = 'product-card';
+  card.href = '#producto/' + p.id;
+  card.setAttribute('data-reveal','');
+  card.style.setProperty('--delay',(i%3)*110 + 'ms');
+
+  var img = getDefaultImage(p.id);
+  var photo = img
+    ? '<img class="img-fade" src="'+img+'" alt="'+p.name+'" loading="lazy" decoding="async">'
+    : p.icon;
+
+  card.innerHTML =
+    '<div class="product-photo">'+photo+'</div>'+
+    '<div class="product-meta"><span class="name">'+p.name+'</span><span class="price">'+formatCOP(p.price)+'</span></div>'+
+    '<div class="product-sub">'+p.sub+'</div>';
+
+  grid.appendChild(card);
+  card.querySelectorAll('img.img-fade').forEach(watchImage);
+});
+scanReveals();
+
+/* =====================================================
+   ROUTER
+   ===================================================== */
+var viewHome = $('#viewHome');
+var viewProduct = $('#viewProduct');
+var header = $('#header');
+var detailGrid = $('#detailGrid');
+var currentProductId = null;
+
+function showHome(){
+  viewProduct.style.display = 'none';
+  viewHome.style.display = 'block';
+  header.style.display = '';
+  header.classList.remove('is-hidden');
+  document.title = 'HOGARQ · Lámparas de Diseño Minimalista';
+  currentProductId = null;
+  updateHeader();
+}
+
+function showProduct(id){
+  var p = PRODUCTS.find(function(x){return x.id === id;});
+  if(!p){showHome();return;}
+  currentProductId = id;
+
+  var initialColor = getInitialColor(id);
+  var img = PRODUCT_IMAGES[id] ? PRODUCT_IMAGES[id][initialColor] : null;
+  $('#dIcon').innerHTML = img ? '<img class="img-fade" src="'+img+'" alt="'+p.name+' · '+initialColor+'">' : p.icon;
+  $('#dIcon').querySelectorAll('img.img-fade').forEach(watchImage);
+
+  $('#dName').textContent = p.name;
+  $('#dSub').textContent = p.sub;
+  $('#dPrice').innerHTML = formatCOP(p.price) + '<small>+ envío</small>';
+
+  var colors = $('#dColors');
+  colors.innerHTML = '';
+  COLORS.forEach(function(c){
+    var d = document.createElement('button');
+    d.type = 'button';
+    d.className = 'dot' + (c === initialColor ? ' active' : '');
+    d.dataset.color = c;
+    d.setAttribute('aria-label', c);
+    colors.appendChild(d);
+  });
+
+  var specs = $('#dSpecs');
+  specs.innerHTML = '';
+  Object.keys(p.specs).forEach(function(k,i){
+    var li = document.createElement('li');
+    li.style.setProperty('--delay',(i*45)+'ms');
+    li.innerHTML = '<span class="k">'+k+'</span><span class="v">'+p.specs[k]+'</span>';
+    specs.appendChild(li);
+  });
+
+  viewHome.style.display = 'none';
+  viewProduct.style.display = 'block';
+  header.style.display = 'none';
+  document.title = p.name + ' · HOGARQ';
+  window.scrollTo(0,0);
+
+  if(!reduceMotion){
+    detailGrid.classList.remove('view-enter');
+    void detailGrid.offsetWidth;
+    detailGrid.classList.add('view-enter');
+  }
+}
+
+$('#dColors').addEventListener('click', function(e){
+  var dot = e.target.closest('.dot');
+  if(!dot || dot.classList.contains('active')) return;
+  this.querySelectorAll('.dot').forEach(function(d){d.classList.remove('active');});
+  dot.classList.add('active');
+  var set = PRODUCT_IMAGES[currentProductId];
+  if(!set) return;
+  var color = dot.dataset.color;
+  var img = $('#dIcon img');
+  if(!img || !set[color]) return;
+  var p = PRODUCTS.find(function(x){return x.id === currentProductId;});
+  var nextAlt = (p ? p.name : '') + ' · ' + color;
+  if(reduceMotion){ img.src = set[color]; img.alt = nextAlt; return; }
+  img.classList.add('is-swapping');
+  var pre = new Image();
+  pre.onload = pre.onerror = function(){
+    img.src = set[color];
+    img.alt = nextAlt;
+    requestAnimationFrame(function(){img.classList.remove('is-swapping');});
+  };
+  pre.src = set[color];
+});
+
+function route(){
+  var m = (location.hash || '').match(/^#producto\/(\d+)$/);
+  if(m){showProduct(parseInt(m[1],10));} else {showHome();}
+}
+window.addEventListener('hashchange', route);
+route();
+
+$('#backBtn').addEventListener('click', function(e){
+  e.preventDefault();
+  if(location.hash && location.hash !== '#'){
+    location.hash = '';
+  } else {
+    showHome();
+  }
+  window.scrollTo({top:0,behavior:reduceMotion ? 'auto' : 'smooth'});
+});
+
+var videoSection = $('#videoSection');
+var progress = $('#scrollProgress');
+var lastY = 0;
+var nav = $('#mainNav');
+var navToggle = $('#navToggle');
+
+function updateHeader(){
+  var y = window.scrollY;
+  if(viewProduct.style.display === 'block'){
+    header.classList.add('on-cream');
+  } else if(videoSection){
+    var rect = videoSection.getBoundingClientRect();
+    header.classList.toggle('on-cream', rect.bottom < 80);
+  }
+  if(!nav.classList.contains('is-open')){
+    header.classList.toggle('is-hidden', y > 240 && y > lastY);
+  }
+  lastY = y;
+  if(progress){
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
+  }
+}
+window.addEventListener('scroll', updateHeader, {passive:true});
+window.addEventListener('resize', updateHeader);
+updateHeader();
+
+navToggle.addEventListener('click', function(){
+  var open = nav.classList.toggle('is-open');
+  navToggle.classList.toggle('is-open', open);
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  navToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+});
+nav.addEventListener('click', function(e){
+  if(e.target.closest('a')){
+    nav.classList.remove('is-open');
+    navToggle.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded','false');
+  }
+});
+
+/* =====================================================
+   VIDEO EN AUTOPLAY
+   ===================================================== */
+var v = $('#sv');
+if(v){
+  var tryPlay = function(){
+    var p = v.play();
+    if(p && typeof p.then === 'function'){
+      p.catch(function(){
+        var kick = function(){
+          try{ v.play(); }catch(e){}
+          document.removeEventListener('click', kick);
+          document.removeEventListener('touchstart', kick);
+          document.removeEventListener('scroll', kick);
+          document.removeEventListener('keydown', kick);
+        };
+        document.addEventListener('click', kick, {once:true});
+        document.addEventListener('touchstart', kick, {once:true});
+        document.addEventListener('scroll', kick, {once:true, passive:true});
+        document.addEventListener('keydown', kick, {once:true});
+      });
+    }
+  };
+  if(v.readyState >= 2){ tryPlay(); }
+  else { v.addEventListener('canplay', tryPlay, {once:true}); }
+
+  v.addEventListener('error', function(){
+    var err = v.error;
+    var msg = 'desconocido';
+    if(err){
+      switch(err.code){
+        case 1: msg = 'MEDIA_ERR_ABORTED'; break;
+        case 2: msg = 'MEDIA_ERR_NETWORK'; break;
+        case 3: msg = 'MEDIA_ERR_DECODE'; break;
+        case 4: msg = 'MEDIA_ERR_SRC_NOT_SUPPORTED'; break;
+      }
+    }
+    console.error('✕ Video:', msg);
+  });
+}
+
+/* =====================================================
+   FORMULARIO
+   ===================================================== */
+var form = $('#cf');
+var note = $('#formNote');
+if(form){
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nombre  = form.elements['nombre'];
+    var email   = form.elements['email'];
+    var mensaje = form.elements['mensaje'];
+    note.classList.remove('is-visible');
+    if(!nombre.value.trim() || !email.value.trim() || !mensaje.value.trim()){
+      note.textContent = 'Completa nombre, email y mensaje para enviar.';
+      note.classList.add('is-error');
+      requestAnimationFrame(function(){note.classList.add('is-visible');});
+      return;
+    }
+    note.classList.remove('is-error');
+    note.textContent = 'Mensaje enviado. Te respondemos en menos de 24 horas, ' + nombre.value.trim() + '.';
+    requestAnimationFrame(function(){note.classList.add('is-visible');});
+    form.reset();
+  });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  var href = a.getAttribute('href');
+  if(href === '#' || href.indexOf('#producto/') === 0) return;
+  a.addEventListener('click', function(e){
+    var t = document.querySelector(href);
+    if(t){
+      e.preventDefault();
+      t.scrollIntoView({behavior:reduceMotion ? 'auto' : 'smooth', block:'start'});
+    }
+  });
+});
+
+})();
+</script>
+</body>
+</html>
