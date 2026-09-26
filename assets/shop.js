@@ -129,6 +129,10 @@ async function checkOrder(){
   const messages={approved:['Pago aprobado',`${data.test?'Esta es una prueba: no se fabricará ni despachará el pedido. ':''}Recibimos tu pedido por ${money(data.total)}. Fabricación y entrega: ${data.delivery} desde el pago aprobado. ${data.emailAccepted?'Enviamos el aviso por correo.':'Estamos preparando el aviso por correo.'} No necesitas confirmar ni responder.`],pending:['Pago pendiente','Aún esperamos la aprobación de Mercado Pago. Si ya pagaste, no repitas el pago. Te avisaremos por correo cuando se apruebe.'],rejected:['Pago rechazado','Mercado Pago no aprobó este intento. Puedes volver al carrito o escribirnos por Instagram.'],cancelled:['Pago cancelado','Este intento fue cancelado. Puedes volver al carrito.'],refunded:['Pago reembolsado','Este pago tiene un reembolso. Escríbenos si necesitas información sobre el pedido.'],charged_back:['Pago en revisión','Este pago tiene un contracargo. Contacta con Hogarq para revisar el pedido.']};
   const message=messages[data.status]||['Pago en revisión','Mercado Pago todavía está revisando tu pago. No realices otro pago por el mismo pedido.'];
   $('#statusTitle').textContent=(data.test?'Prueba · ':'')+message[0];$('#statusMessage').textContent=message[1];
+  if(data.verificationDelayed && data.status==='pending'){
+   $('#statusTitle').textContent='Estamos verificando tu pago';
+   $('#statusMessage').textContent='No pudimos completar la verificación con Mercado Pago. Si allí aparece aprobado, no vuelvas a pagar. Puedes actualizar el estado o contactar con Hogarq con la referencia del pedido.';
+  }
   if(data.status==='approved'&&JSON.stringify(cart)===JSON.stringify(saved.cart)){cart=[];changed();}
   if(['pending','in_process','authorized'].includes(data.status)&&dialog.open)pollTimer=setTimeout(checkOrder,12000);
  }catch(error){$('#statusTitle').textContent='Consulta de tu pedido';$('#statusMessage').textContent=error.message;}

@@ -95,6 +95,19 @@ test('pending payments send no receipts and refunds stop appearing as approved',
  payment.status='approved';await notify();payment.status='refunded';payment.transaction_amount_refunded=220000;await notify();
  assert.equal(JSON.parse(db.get('hogarq:test:order:'+id)).status,'refunded');assert.equal(mails.length,2);
 });
+test('status distinguishes a failed verification from a pending payment without sending receipts',async()=>{
+ const created=await call(checkout,'POST','/api/checkout',input());
+ payment.metadata={};
+ const found=await call(status,'GET','/api/order?id='+id,null,{authorization:'Bearer '+created.body.accessToken});
+ assert.equal(found.body.verificationDelayed,true);
+ assert.equal(found.body.status,'pending');
+ assert.equal(mails.length,0);
+ payment.metadata={hogarq_order_id:id};
+ const recovered=await call(status,'GET','/api/order?id='+id,null,{authorization:'Bearer '+created.body.accessToken});
+ assert.equal(recovered.body.verificationDelayed,false);
+ assert.equal(recovered.body.status,'approved');
+ assert.equal(mails.length,2);
+});
 test('CORS, missing config and malformed requests fail closed',async()=>{
  assert.equal((await call(checkout,'POST','/api/checkout',input(),{origin:'https://evil.example'})).status,403);
  assert.equal((await call(checkout,'GET','/api/checkout')).status,405);

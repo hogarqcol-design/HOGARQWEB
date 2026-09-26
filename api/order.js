@@ -14,7 +14,12 @@ module.exports = endpoint('GET',async(req,res)=>{
   if (!order || Buffer.byteLength(token) !== Buffer.byteLength(order.accessToken) || !timingSafeEqual(Buffer.from(token),Buffer.from(order.accessToken))) throw new HttpError(404,'No encontramos el pedido en esta sesión. Revisa el correo o contáctanos por Instagram.');
   // Reconcile if the webhook was delayed, including when the buyer returned immediately.
   // Do not trust status/payment_id query parameters supplied by the browser.
-  try { order = await reconcile(c,order); } catch { /* Saved state remains authoritative; webhook retries separately. */ }
-  json(res,200,{id:order.id,status:order.status,total:order.total,delivery:order.delivery,test:!c.production,
+  let verificationDelayed = false;
+  try { order = await reconcile(c,order); } catch {
+    verificationDelayed = true;
+    console.error('hogarq_order_verification_delayed');
+    order = await getOrder(id);
+  }
+  json(res,200,{id:order.id,status:order.status,total:order.total,delivery:order.delivery,test:!c.production,verificationDelayed,
     emailAccepted:!!order.receipts?.customer?.sentAt});
 });
