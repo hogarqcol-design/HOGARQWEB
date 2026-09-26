@@ -35,7 +35,7 @@ module.exports = endpoint('POST',async(req,res)=>{
       // A real shopper email must not be used as a sandbox Mercado Pago account.
       ...(c.production ? {payer:{name:order.customer.name,email:order.customer.email}} : {}),
       back_urls:{success:back,pending:back,failure:back},auto_return:'approved',
-      notification_url:c.site+'/api/mercadopago-webhook?source_news=webhooks',
+      notification_url:c.webhookUrl,
       statement_descriptor:'HOGARQ',expires:true,
       expiration_date_to:new Date(order.createdAt+86400000).toISOString()
     });

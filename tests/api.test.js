@@ -90,3 +90,12 @@ test('CORS, missing config and malformed requests fail closed',async()=>{
  delete process.env.MERCADOPAGO_WEBHOOK_SECRET;assert.equal((await call(checkout,'POST','/api/checkout',input())).status,503);
  assert.equal(preferences.length,0);
 });
+test('Preview webhook can bypass Vercel protection without leaking the secret to the browser',async()=>{
+ process.env.VERCEL_AUTOMATION_BYPASS_SECRET='private-automation-secret';
+ const created=await call(checkout,'POST','/api/checkout',input());
+ assert.equal(created.status,200);
+ assert(preferences[0].notification_url.includes('x-vercel-protection-bypass=private-automation-secret'));
+ assert(!JSON.stringify(created.body).includes('private-automation-secret'));
+ const publicConfig=await call(require('../api/config'),'GET','/api/config');
+ assert.deepEqual(publicConfig.body,{enabled:true,test:true});
+});

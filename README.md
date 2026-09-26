@@ -64,7 +64,7 @@ Esta base conserva el pedido antes de abrir Mercado Pago, sus datos de entrega, 
 4. Guardar y copiar la firma secreta en `MERCADOPAGO_WEBHOOK_SECRET` en Vercel, tipo Secret, Preview.
 5. Volver a desplegar Preview para aplicar las variables.
 
-El endpoint debe ser accesible a los servidores de Mercado Pago. Si la protección de Preview de Vercel redirige a inicio de sesión, la notificación no podrá llegar: preparar un acceso público adecuado para esta prueba o configurar el mecanismo oficial de bypass antes de probar. No desactivar protecciones de otros proyectos ni compartir tokens de bypass por chat.
+El endpoint debe ser accesible a los servidores de Mercado Pago. La vista previa actual requiere inicio de sesión. En Vercel → Settings → Deployment Protection → Protection Bypass for Automation, generar un secreto para esta integración. Vercel lo incluye como `VERCEL_AUTOMATION_BYPASS_SECRET` en los despliegues nuevos. El servidor lo añade únicamente a la URL de notificación que envía a Mercado Pago en Preview; no lo devuelve al navegador. Volver a desplegar después de crearlo. No hace falta desactivar la protección del proyecto. No compartir este token ni la URL que lo contiene por chat. Si se usa el simulador del panel de Mercado Pago, su URL también necesita ese parámetro privado. Los pedidos creados desde la tienda ya lo llevan automáticamente.
 
 El simulador de Mercado Pago puede usar un pago ficticio que no existe en la API. La prueba final debe ser una compra con cuentas/tarjetas de prueba y un pedido creado por la tienda; un resultado del simulador por sí solo no verifica el flujo.
 
@@ -102,3 +102,4 @@ Después de las pruebas y aprobación del propietario: usar la cuenta vendedora 
 - [API de correos e idempotencia de Resend](https://resend.com/docs/api-reference/emails/send-email)
 - [Upstash REST API](https://upstash.com/docs/redis/features/restapi)
 - [Variables de Vercel](https://vercel.com/docs/environment-variables/managing-environment-variables)
+- [Acceso de webhooks a vistas previas protegidas](https://vercel.com/docs/deployment-protection/methods-to-bypass-deployment-protection/protection-bypass-automation)
