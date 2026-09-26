@@ -41,8 +41,8 @@ En el proyecto de Vercel, crear estas variables **solo en Preview**:
 | `MERCADOPAGO_ACCESS_TOKEN` | Secret. Access Token del vendedor de prueba, ya configurado por el propietario. |
 | `RESEND_API_KEY` | Secret. Clave con permiso de envío para hogarq.store, ya configurada. |
 | `MERCADOPAGO_WEBHOOK_SECRET` | Secret. Firma secreta generada en Webhooks de la aplicación de Mercado Pago. No es el Access Token. |
-| `UPSTASH_REDIS_REST_URL` | URL HTTPS del almacenamiento privado Upstash Redis. |
-| `UPSTASH_REDIS_REST_TOKEN` | Secret. Token REST de escritura de esa base. |
+| `UPSTASH_REDIS_REST_URL` / `KV_REST_API_URL` | URL HTTPS del almacenamiento privado Upstash Redis. Vercel crea el segundo nombre automáticamente. |
+| `UPSTASH_REDIS_REST_TOKEN` / `KV_REST_API_TOKEN` | Secret. Token REST de escritura de esa base. Vercel crea el segundo nombre automáticamente. |
 | `PAYMENT_MODE` | Config: `test`. |
 | `SITE_URL` | Config: URL HTTPS **estable de la rama Preview**, sin ruta. Se usa para retorno y notificaciones. Puede omitirse si `VERCEL_BRANCH_URL` está disponible y es accesible. |
 | `CHECKOUT_ENABLED` | Config: `true` solamente cuando estén configurados los valores anteriores. |
