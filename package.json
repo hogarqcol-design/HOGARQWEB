@@ -1,0 +1,11 @@
+{
+  "name": "hogarq-web",
+  "private": true,
+  "version": "1.0.0",
+  "engines": { "node": "22.x" },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/dev.js",
+    "test": "node --test tests/*.test.js"
+  }
+}
