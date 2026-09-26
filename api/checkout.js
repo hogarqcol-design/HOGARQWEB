@@ -26,7 +26,13 @@ module.exports = endpoint('POST',async(req,res)=>{
       order = {...normalized,id:input.requestId,fingerprint,sellerId:seller.id,status:'pending',createdAt:Date.now(),accessToken:randomUUID()};
       await saveOrder(order);
     }
-    const back = c.site+'/?order='+order.id+'#pedido';
+    // Return to the validated origin that owns the buyer's sessionStorage.
+    // SITE_URL can still point at a previous immutable Preview deployment.
+    const back = req.headers.origin+'/?order='+order.id+'#pedido';
+    const notification = new URL(c.webhookUrl);
+    if (process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL) {
+      notification.host = new URL('https://'+process.env.VERCEL_URL).host;
+    }
     const preference = await mp(c,'/checkout/preferences',{
       external_reference:order.id,
       metadata:{hogarq_order_id:order.id},
@@ -35,7 +41,7 @@ module.exports = endpoint('POST',async(req,res)=>{
       // A real shopper email must not be used as a sandbox Mercado Pago account.
       ...(c.production ? {payer:{name:order.customer.name,email:order.customer.email}} : {}),
       back_urls:{success:back,pending:back,failure:back},auto_return:'approved',
-      notification_url:c.webhookUrl,
+      notification_url:notification.href,
       statement_descriptor:'HOGARQ',expires:true,
       expiration_date_to:new Date(order.createdAt+86400000).toISOString()
     });

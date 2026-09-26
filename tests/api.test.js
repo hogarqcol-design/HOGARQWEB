@@ -45,6 +45,17 @@ beforeEach(()=>{
  };
 });
 afterEach(()=>{global.fetch=originalFetch;process.env={...originalEnv};});
+test('Preview returns to the originating deployment and notifies the current server',async()=>{
+ process.env.VERCEL_URL='new-preview.example';
+ const created=await call(checkout,'POST','/api/checkout',input(),{origin:'https://new-preview.example'});
+ assert.equal(created.status,200);
+ for(const target of Object.values(preferences[0].back_urls)) assert.equal(new URL(target).origin,'https://new-preview.example');
+ assert.equal(new URL(preferences[0].notification_url).origin,'https://new-preview.example');
+ const found=await call(status,'GET','/api/order?id='+id,null,{authorization:'Bearer '+created.body.accessToken});
+ assert.equal(found.body.status,'approved');
+ assert.equal(found.body.emailAccepted,true);
+ assert.equal(mails.length,2);
+});
 test('checkout persists full order before redirect; server ignores submitted prices; retry reuses preference',async()=>{
  const body=input();body.items[0].price=1;body.total=2;body.shipping=0;
  const first=await call(checkout,'POST','/api/checkout',body);
